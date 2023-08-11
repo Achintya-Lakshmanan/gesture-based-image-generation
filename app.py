@@ -97,6 +97,9 @@ def main():
 
     #  ########################################################################
     mode = 0
+    
+    # Create white canvas
+    white_canvas = np.full((cap_height, cap_width, 3), 255, dtype=np.uint8)
 
     while True:
         fps = cvFpsCalc.get()
@@ -143,6 +146,8 @@ def main():
                 hand_sign_id = keypoint_classifier(pre_processed_landmark_list)
                 if hand_sign_id == 2:  # Point gesture
                     point_history.append(landmark_list[8])
+                    # Trace the trajectory of the fingertip on the white canvas
+                    white_canvas = draw_point_history(white_canvas, point_history)
                 else:
                     point_history.append([0, 0])
 
@@ -176,6 +181,8 @@ def main():
 
         # Screen reflection #############################################################
         cv.imshow('Hand Gesture Recognition', debug_image)
+
+        cv.imshow('White Canvas', white_canvas)
 
     cap.release()
     cv.destroyAllWindows()
@@ -510,7 +517,6 @@ def draw_info_text(image, brect, handedness, hand_sign_text,
                    cv.LINE_AA)
 
     return image
-
 
 def draw_point_history(image, point_history):
     for index, point in enumerate(point_history):
