@@ -151,6 +151,12 @@ def main():
                 else:
                     point_history.append([0, 0])
 
+                if hand_sign_id == 1: 
+                    white_canvas = np.full((cap_height, cap_width, 3), 255, dtype=np.uint8)
+
+                else:
+                    point_history.append([0, 0])
+
                 # Finger gesture classification
                 finger_gesture_id = 0
                 point_history_len = len(pre_processed_point_history_list)
