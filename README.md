@@ -4,7 +4,7 @@ Recognize Gestures Using Mediapipe. Trace index fingertip movement in real-time 
 
 ## Demo
 
-(/outputs/Demo.mp4)
+https://github.com/AchintyaSNU/hand-gesture-recognition-mediapipe/assets/111832051/0985d10a-ccd1-4208-93bf-11113de6d18b
 
 ## Requirements
 
