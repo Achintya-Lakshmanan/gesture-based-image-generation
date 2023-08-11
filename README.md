@@ -1,10 +1,10 @@
 # Gesture-Based Image Generation Using Mediapipe and ControlNet (IN PROGRESS)
 
-Recognize Gestures Using Mediapipe. Trace index fingertip movement in real time and generate images using ControlNet.
+Recognize Gestures Using Mediapipe. Trace index fingertip movement in real-time and generate images using ControlNet.
 
 ## Demo
 
-[![Demo Video]("/outputs/thumbnail.png")](https://youtu.be/V9la6-jCuqI)
+(/outputs/Demo.mp4)
 
 ## Requirements
 
@@ -18,7 +18,7 @@ python app.py
 
 ## To Do
 
-1) Improve Working of index finger tracking and maybe sampling rate.
+1) Improve the Working of index finger tracking and maybe sampling rate.
 2) Add more gestures for different purposes.
 3) Link canvas to ControlNet model for image generation.
 
